@@ -8,11 +8,8 @@ body {
     height: 700px;
     background-position: top;
     background-size: cover;
-    /* background-image: url("../img/lawyer.jpg"); */
     background: 
                 linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url("../img/lawyer.jpg");
-    /* -webkit-filter: grayscale(40%); 
-    filter: grayscale(40%); */
     
 }
 
@@ -20,19 +17,33 @@ body {
     padding: 0;
 }
 
+nav{
+  height: 80px;
+  /* justify-content: center;
+  align-items: center; */
+  padding: 11px;
+}
+
+nav a{
+  margin-top: 25px;
+}
+
 .nav{
     float: right;
-    padding: 10px;
+    /* padding: 10px; */
+    margin-right: 250px;
 }
 
 .black { 
     color: black;
-    font-size: 15px;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
 } s
 
 .link{
-    color: grey;
+    color: #ccc;
     font-size: 12px;
+    margin-right: 20px;
   }
 
 .link:hover {
@@ -56,7 +67,8 @@ body {
     height: 400px;
     float: left;
     margin: 100px;
-    margin-left:190px;
+    margin-left:264px;
+    margin-top: 175px;
     /* -webkit-filter: grayscale(0%); 
     filter: grayscale(0%); */
 }
@@ -77,14 +89,14 @@ body {
     height: 50px;
     width: 150px;
     /* margin-top: 70px;*/
-    margin-left: 90px;
+    margin-left: 100px;
 }
 
 .white{
     background: white;
     height: 12%;
     width: 75%;
-    margin-top: 20px;
+    margin-top: 23px;
     margin-left: 35px;
 }
 
@@ -103,16 +115,16 @@ body {
 
 .yellow{
     background: rgb(249, 221, 19);
-    height: 12%;
-    width: 45%;
+    height: 40px;
+    width: 150px;
     margin-top: 25px;
     margin-left: 35px;
 }
 
 .yellow1{
     background: rgb(244, 229, 20);
-    height: 10%;
-    width: 12%;
+    height: 40px;
+    width: 150px;
     margin-top: 40px;
     margin-left: 725px;
 }
@@ -174,7 +186,7 @@ body {
     background-position: center; 
     background-repeat: no-repeat;
     background-size: cover;
-    height: 800px;
+    height: 863px;
     margin-top: 300px;
     width: 100%;
   } 
@@ -198,9 +210,11 @@ body {
 
   .Menu {
     text-decoration: none;
-    font-family: Helvetica;
-    margin-left: 200px;
+    font-family: Arial, sans-serif;
+    margin-left: 263px;
     margin-top: 20px; 
+    font-size: 18px;
+    font-weight: 40;
   }
 
   .font {
@@ -220,10 +234,11 @@ body {
   .font3{
     color: white;
     margin-left: 30px; /* Indent the whole element from the left */
-    margin-top: 10px;  /* Optional: Add spacing above the element */
+    margin-top: 45px;  /* Optional: Add spacing above the element */
     margin-bottom: 10px;
     font-size: 10px;
     font-family: sans-serif;
+    font-weight: 5;
   }
 
   .font15{
@@ -233,6 +248,7 @@ body {
     margin-bottom: 10px;
     font-size: 35px;
     font-family: sans-serif;
+    font-weight: 5;
   }
 
 
@@ -246,11 +262,15 @@ body {
 
   .font6{
     font-size: 12px;
-    text-align: center;
+    /* text-align: center;
     margin-top: 20px;
-    margin: auto;
-    padding: 12px;
+    margin: auto; */
+    padding: 15px;
     font-family: sans-serif;
+    font-weight: 5;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 
   }
 
@@ -274,7 +294,9 @@ body {
   .gray2{
     text-align: center;
     margin-top: 10px;
+    font-size: 12px;
   }
+  
 
   .font10{
     text-align: center;
@@ -282,9 +304,12 @@ body {
     color: white;
     font-size: 25px;
     font-family: sans-serif;
-    margin-left: 60px;
+    /* margin-left: 60px; */
     /* justify-content: center;
     align-items: center; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
 
   .font11{
@@ -293,24 +318,35 @@ body {
     color: white;
     font-size: 13px;
     font-family: sans-serif;
-    margin-left: 65px;
+    /* margin-left: 65px; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
 
   .font12 {
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     margin-top: 40px;
     font-family: sans-serif;
     padding: 16px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: 30;
   }
 
   .font13{
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     margin-top: 80px;
     color: white;
-    font-size: 10px;
     font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    font-weight: 5;
   }
 
   .font14 {
@@ -319,19 +355,33 @@ body {
     margin-top: 20px;
     color: white;
     font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
 
   .font16{
     color: rgb(161, 159, 159);
-    font-size: 15px;
+    font-size: 12px;
     margin-top: 10px;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: Arial, sans-serif;
   }
 
   .font17{
     color: black;
     font-size: 20px;
-    margin-top: 50px;
-    text-align: center;
+    /* margin-top: 50px; */
+    /* text-align: center; */
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: Arial,sans-serif;
+    margin-top: 120px;
   }
 
   .font18{
@@ -418,6 +468,8 @@ span.b {
     padding: 1rem 1rem;
     text-align: center;
     height : 400px;
+
+    margin-left:40px;
   }
   .child {
     display: inline-block;
