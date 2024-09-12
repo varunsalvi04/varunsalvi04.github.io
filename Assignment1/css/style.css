@@ -8,10 +8,12 @@ body {
     height: 700px;
     background-position: top;
     background-size: cover;
-    background-image: url("/Users/varunsalvi/Desktop/USC/Webtech/Assignment1/varun04/img/lawyer.jpg");
-    /* background: 
-                linear-gradient(rgba(255, 255, 255, -3), rgba(255, 255, 255, -3)),url("/Users/varunsalvi/Desktop/USC/Webtech/Assignment1/varun04/img/lawyer.jpg"); */
-    background-color: rgba(0,0,0,0.2);
+    /* background-image: url("../img/lawyer.jpg"); */
+    background: 
+                linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url("../img/lawyer.jpg");
+    /* -webkit-filter: grayscale(40%); 
+    filter: grayscale(40%); */
+    
 }
 
 .padding{
@@ -26,7 +28,7 @@ body {
 .black { 
     color: black;
     font-size: 15px;
-}
+} s
 
 .link{
     color: grey;
@@ -55,6 +57,8 @@ body {
     float: left;
     margin: 100px;
     margin-left:190px;
+    /* -webkit-filter: grayscale(0%); 
+    filter: grayscale(0%); */
 }
 
 .blue2{
@@ -165,7 +169,7 @@ body {
 
   .glasses {
     background: 
-                linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),url("/Users/varunsalvi/Desktop/USC/Webtech/Assignment1/varun04/img/glasses.png");
+                linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),url("../img/glasses.png");
     background-attachment: fixed;
     background-position: center; 
     background-repeat: no-repeat;
@@ -177,7 +181,7 @@ body {
 
   
   .notebook{
-    background-image:url("/Users/varunsalvi/Desktop/USC/Webtech/Assignment1/varun04/img/notebook.jpg");
+    background-image:url("../img/notebook.jpg");
     /* background-attachment: fixed;
     /* background-position: center; 
     background-repeat: no-repeat; */
@@ -202,6 +206,8 @@ body {
   .font {
     text-decoration: none;
     font-family: Helvetica;
+    color: gray;
+    font-size: 12px;
   }
 
   .font1{
