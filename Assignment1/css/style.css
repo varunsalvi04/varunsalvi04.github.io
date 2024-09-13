@@ -22,8 +22,6 @@ body {
 
 nav{
   height: 80px;
-  /* justify-content: center;
-  align-items: center; */
   padding: 11px;
 }
 
@@ -33,7 +31,6 @@ nav{
 
 .nav{
     float: right;
-    /* padding: 10px; */
     margin-right: 250px;
 }
 
@@ -78,8 +75,6 @@ nav{
     margin: 100px;
     margin-left:264px;
     margin-top: 175px;
-    /* -webkit-filter: grayscale(0%); 
-    filter: grayscale(0%); */
 }
 
 .blue2{
@@ -97,7 +92,6 @@ nav{
     background-color: rgb(10, 59, 94);
     height: 50px;
     width: 150px;
-    /* margin-top: 70px;*/
     margin-left: 100px;
 }
 
@@ -180,8 +174,6 @@ nav{
 
 .center {
     display: block;
-    /* margin-left: auto;
-    margin-right: auto; */
     top: 0;
     bottom: 0;
     width: 100%;
@@ -207,9 +199,6 @@ nav{
   
   .notebook{
     background-image:url("../img/notebook.jpg");
-    /* background-attachment: fixed;
-    /* background-position: center; 
-    background-repeat: no-repeat; */
     background-position: center;
     background-size: cover;
     height: 500px;
@@ -246,8 +235,8 @@ nav{
 
   .font3{
     color: white;
-    margin-left: 30px; /* Indent the whole element from the left */
-    margin-top: 45px;  /* Optional: Add spacing above the element */
+    margin-left: 30px; 
+    margin-top: 45px;  
     margin-bottom: 10px;
     font-size: 10px;
     font-family: sans-serif;
@@ -256,8 +245,8 @@ nav{
 
   .font15{
     color: white;
-    margin-left: 30px; /* Indent the whole element from the left */
-    margin-top: 10px;  /* Optional: Add spacing above the element */
+    margin-left: 30px;
+    margin-top: 10px;  
     margin-bottom: 10px;
     font-size: 35px;
     font-family: sans-serif;
@@ -322,9 +311,6 @@ nav{
     color: white;
     font-size: 25px;
     font-family: sans-serif;
-    /* margin-left: 60px; */
-    /* justify-content: center;
-    align-items: center; */
     justify-content: center;
     align-items: center;
     display: flex;
@@ -336,7 +322,6 @@ nav{
     color: white;
     font-size: 13px;
     font-family: sans-serif;
-    /* margin-left: 65px; */
     justify-content: center;
     align-items: center;
     display: flex;
@@ -392,8 +377,6 @@ nav{
   .font17{
     color: black;
     font-size: 20px;
-    /* margin-top: 50px; */
-    /* text-align: center; */
 
     justify-content: center;
     align-items: center;
@@ -425,13 +408,8 @@ nav{
 
 
 .boxes{
-    /* background-color: #e5e5f7; */
-    /* opacity: 2; */
     background-image:  
     repeating-linear-gradient(to right, transparent, transparent 15px, rgba(0,0,0,0.05) 16px, rgba(0,0,0,0.05) 16px), repeating-linear-gradient(to bottom, transparent, transparent 15px, rgba(0,0,0,0.05) 16px, rgba(0,0,0,0.05) 16px),  repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(0,0,0,0.05) 16px, rgba(0,0,0,0.05) 16px),repeating-linear-gradient(-45deg, transparent, transparent 15px, rgba(0,0,0,0.05) 16px, rgba(0,0,0,0.05) 16px) ;
-
-    /* background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-    background-position: -4px -4px, -3px -3px, -2px -2px, -2px -2px;*/
     height: 500px; 
 }
 
