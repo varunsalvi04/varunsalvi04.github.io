@@ -1,8 +1,11 @@
+
 body {
     margin: 0;
     padding: 0;
     width: 1600px;
  }
+
+ 
 
 .image{
     height: 700px;
@@ -24,7 +27,7 @@ nav{
   padding: 11px;
 }
 
-nav a{
+.link-margin{
   margin-top: 25px;
 }
 
@@ -38,7 +41,13 @@ nav a{
     color: black;
     font-size: 13px;
     font-family: Arial, sans-serif;
-} s
+} 
+
+.glasses-font{
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    color: rgba(0,0,0,0.6);
+}
 
 .link{
     color: #ccc;
@@ -104,8 +113,9 @@ nav a{
     
     background: white; width: 23%; height: 50%;
     float: left;
-    margin: 70px;
-    margin-left: 75px;
+    margin: 0px;
+    margin-left: 110px;
+    margin-top: 60px;
 }
 
 .white3{
@@ -188,8 +198,11 @@ nav a{
     background-size: cover;
     height: 863px;
     margin-top: 300px;
-    width: 100%;
+    min-width: 1600px;
   } 
+
+  
+  
 
   
   .notebook{
@@ -220,7 +233,7 @@ nav a{
   .font {
     text-decoration: none;
     font-family: Helvetica;
-    color: gray;
+    color: rgba(233, 225, 225, 0.918);
     font-size: 12px;
   }
 
@@ -277,18 +290,23 @@ nav a{
   .font7{
     font-family: sans-serif;
     font-size: 15px;
+    font-weight: 5;
   }
 
   .font8{
     text-align: justify;
     color: rgb(161, 159, 159);
-    font-size: 15px;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    font-weight: 1;
   }
 
   .gray1{
     text-align: center;
     margin-top: 120px;
     font-size: 20px;
+    font-weight: 5;
+    font-family: Arial, sans-serif;
   }
 
   .gray2{
