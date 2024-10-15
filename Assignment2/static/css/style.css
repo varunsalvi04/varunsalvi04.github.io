@@ -1,0 +1,510 @@
+body{
+    background-color: #E5E5E5;
+    height: 100%;
+    width: 100%;
+}
+
+.bannerDiv{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 45px;
+}
+
+.banner{
+    /* justify-content: center;
+    align-items: center; */
+    /* margin-left: 500px; */
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.bannerImage{
+    height: 112px;
+    width: 500px;
+    margin-left: 477px;
+}
+
+.bannerText{
+    position: absolute;
+    margin-left: 506px;
+    margin-top: -87px;
+    font-size: 25px;
+    font-family: sans-serif;
+    color: rgb(61, 59, 59);
+}
+
+.bannerTextFormFill{
+    position: absolute;
+    margin-left: 506px;
+    margin-top: -40px;
+    font-size: 18px;
+    color: rgb(75, 73, 73);
+    font-family: sans-serif;
+}
+
+.bannerForm{
+    position: absolute;
+    margin-left: 500px;
+    margin-top: -50px;
+    font-size: 15px;
+}
+
+
+.formContainer{
+    background-color: white;
+    margin-top: -4px;
+    margin-left: 477px;
+    font-family: sans-serif;
+    width : 500px;
+    height : 260px;
+    font-size: 15px;
+
+}
+
+.formContainerText{
+    margin-left: 30px;
+    margin-top: -30px;
+    color: #5A6F9C;
+}
+
+.formContainerStreet{
+    margin-left: 30px;
+    height: 20px;
+    width: 430px;
+    border: 1px solid rgb(187, 184, 184);
+}
+.formContainerCity{
+    margin-left: -77px;
+    margin-top: 20px;
+    width: 150px;
+    height: 20px;
+    border: 1px solid rgb(187, 184, 184);
+}
+
+.formContainerState{
+    margin-left: -62px;
+    margin-top: 20px;
+    width: 208px;
+    height: 20px;
+    background-color: #ECECEC;
+}
+
+/* Container for both city and state fields */
+.stateDropdownContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between input and dropdown */
+}
+
+.stateDropdownContainercorners2{
+    border-radius: 5px;
+    border: 2px solid black;
+  }
+
+
+/* Container for the city and state fields */
+.formRow {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust the space between city and state fields */
+}
+
+.noRecordFound{
+    background-color: white;
+    margin-top: 15px;
+    margin-left: 477px;
+    font-family: sans-serif;
+    width : 500px;
+    height : 40px;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.noRecordFoundText{
+    padding: 10px;
+    font-family: sans-serif;
+    color: #023148;
+}
+
+.required::after{
+    content:"*";
+    color: red;
+    font-size:20px;
+}
+
+.hrLine{
+    margin-top:20px;
+    border: none;
+    height: 1px;
+    background-color: rgb(79, 74, 74);
+    width: 87%;
+    margin-left: 30px;
+}
+
+.clearText{
+    color: rgb(93, 110, 156, 100);
+    font-size: 17px;
+    margin-left: 30px;
+}
+
+/* .submitButton{
+    margin-top: 25px;
+    margin-left: 30px;
+    width: 90px;
+    height: 44px;
+    background-color: rgb(78, 111, 173, 100);
+    color: white;
+} */
+
+/* .clearButton{
+    width: 90px;
+    height: 44px;
+    background-color: rgb(254, 182, 2, 100);
+    color: white;
+} */
+
+/* Submit Button with 3D Effect */
+.submitButton {
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 90px;
+    height: 36px;
+    background-color: rgba(78, 111, 173, 1); /* Use the same color */
+    color: white;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px rgba(50, 70, 120, 1); /* Darker shadow color for 3D effect */
+    transition: all 0.3s ease;
+    font-size: 16px;
+    outline: none;
+}
+
+.submitButton:active {
+    box-shadow: 0 2px rgba(50, 70, 120, 1); /* Adjust shadow on press */
+    transform: translateY(2px);
+}
+
+.submitButton:hover {
+    background-color: rgba(78, 111, 173, 0.9); /* Slight color change on hover */
+}
+
+/* Clear Button with 3D Effect */
+.clearButton {
+    margin-left: -2px;
+    width: 90px;
+    height: 36px;
+    background-color: rgba(254, 182, 2, 1); /* Maintain the original color */
+    color: white;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px rgba(200, 140, 0, 1); /* Darker shadow for 3D effect */
+    transition: all 0.3s ease;
+    font-size: 16px;
+    outline: none;
+}
+
+.clearButton:active {
+    box-shadow: 0 2px rgba(200, 140, 0, 1); /* Adjust shadow on press */
+    transform: translateY(2px);
+}
+
+.clearButton:hover {
+    background-color: rgba(254, 182, 2, 0.9); /* Slight color change on hover */
+}
+
+
+.weathercard {
+    background-color: white;
+    margin-top: 45px;
+    margin-left: 378px;
+    font-family: sans-serif;
+    width: 700px;
+    height: 400px;
+    white-space: nowrap;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2), -3px -3px 10px rgba(255, 255, 255, 0.2); /* 3D effect */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.weathercard:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.3); /* Enhanced shadow on hover */
+    transform: translateY(-5px); /* Slight upward movement on hover */
+}
+
+
+
+.dailyweathercardIcon{
+    width: 150px;
+    height: 150px;
+}
+/* 
+.weathercardPressure{
+    margin-top: 180px;
+    margin-left: 70px;
+}
+
+.weathercardWindSpeed{
+    margin-top: 180px;
+    margin-left: 70px;
+}
+
+.weathercardVisibility{
+    margin-top: 180px;
+    margin-left: 70px;
+}
+
+.weathercardCloudCover{
+    margin-top: 180px;
+    margin-left: 70px;
+}
+
+.weathercardUVLevel{
+    margin-top: 180px;
+    margin-left: 70px;
+} */
+
+.weathercardDetails {
+    width: 100%; /* Makes the table full width */
+    table-layout: fixed; /* Ensures equal column width */
+    border-spacing: 0px; /* Adjust spacing between cells */
+    text-align: center; /* Centers text and images in table cells */
+    margin-top: -20px;
+    margin-left: 5px;
+    color: grey;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+.weathercardDetails th,
+.weathercardDetails td {
+    padding: 8px; /* Adds padding inside cells */
+    border-bottom: 0px solid #ddd; /* Optional: Adds a border for neatness */
+}
+
+.weathercardDetails th {
+    font-weight: bold;
+}
+
+.weathercardDetails img {
+    display: block;
+    margin: 0 auto; /* Centers the images inside table cells */
+}
+
+
+.weathercardAddress{
+    margin-left: 20px;
+    color: grey;
+    font-family: sans-serif;
+    font-weight: lighter;
+    padding: 10px;
+}
+
+.weathercardTemperature{
+    /* margin-left: 225px; */
+    font-size: 115px;
+    float: left;
+    white-space: nowrap;
+    margin-left: 140px;
+    font-weight: lighter;
+    color: grey;
+}
+
+.weathercardCondition{
+    
+    float: left;
+    height: 195px;
+}
+
+.weatherConditionText{
+    margin-top: 0px;
+    margin-bottom:0px;
+    margin-left: 50px;
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: lighter;
+    color: grey;
+}
+
+.weatherConditionTextStatus{
+    margin-top: 0px;
+    margin-bottom:0px;
+}
+
+.weathercardIcon{
+    width: 150px;
+    height: 150px;
+    margin-left: 30px;
+}
+
+.disable_section {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: 1000px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    justify-content: center;
+    align-items: center;
+    margin-left: 250px;
+    margin-top: 45px;
+}
+.tableHeader {
+    background-color: #4F6FAD;
+    text-align: center;
+    height: 50px;
+}
+
+.styled-table th, 
+.styled-table td{
+    height: 50px;
+    border-bottom: 10px solid #E5E5E5; /* Optional: Adds a border for neatness */
+    text-align: center; /* Center content horizontally */
+    vertical-align: middle; /* Center content vertically */
+    border-right: none; /* Remove right border */
+}
+
+.tableRow{
+    border-bottom: 10px solid #E5E5E5;
+    background-color: white;
+    text-align: center;
+    height: 50px;
+}
+
+/* Remove the right border for the last cell in each row to prevent extra border */
+.styled-table tr td:last-child,
+.styled-table tr th:last-child {
+    border-right: none; /* Ensure no right border for the last column */
+}
+
+.dailyWeatherDetailsCard {
+    background: linear-gradient(to bottom, #f0f0f0, #364D77);
+    margin-top: 20px;
+    margin-left: 477px;
+    font-family: sans-serif;
+    width: 490px;
+    height: 425px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2), -3px -3px 10px rgba(255, 255, 255, 0.2); /* 3D effect */
+    border-bottom: 2px solid #000; /* Slight border at the bottom */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.dailyWeatherDetailsCard:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.3); /* Enhanced shadow on hover */
+    transform: translateY(-5px); /* Slight upward movement on hover */
+}
+
+
+
+
+.dailyWeatherDetailsCardTextHeading{
+    margin-left: 575px;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+.styled-line {
+    border: none;
+    height: 1px;
+    background-color: #dedada;
+    width: 24%;
+    margin-left: 542px;
+  }
+
+
+.dailyWeatherDetailsCardText{
+    margin-left: 20px;
+    font-size: 25px;
+    color: #374B78;
+}
+
+.dailyWeatherDetailsCardTextTemperature{
+    margin-left: 20px;
+    font-size: 35px;
+    color: #374B78;
+    font-weight: normal;
+}
+
+
+.dailyWeatherDetailsCardContents{
+    margin-left: 60px;
+    color: white;
+}
+
+.dailyWeatherDetailData{
+    align-items: center;
+}
+
+.dailyWeatherDetailPutDown{
+    margin-top: 0px;
+    margin-left: 700px;
+}
+
+.chartsDetailsTextHeading{
+    margin-left: 605px;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+.temperatureGraph1{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.weather-value{
+    font-weight: 550;
+    font-size: 21px;
+    color: white;
+}
+
+.dailyWeatherDetailsCardContents span {
+    display:inline-block;
+    width:193px;
+    text-align:left;
+}
+
+.dailyWeatherDetailsCardContents div {
+    margin: 4px 0;
+}
+
+.dailyWeatherDetailsCardContents span:first-of-type {
+    text-align:right;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.dailyWeatherDetailsCardContents span:last-of-type {
+    font-size: 20px;
+    font-weight: 550;
+}
+
+/* .dailyWeatherDetailsCardContents div {
+    display: flex;
+  }
+  
+  .dailyWeatherDetailsCardContents div span {
+    flex: 1;
+  }
+  
+  .dailyWeatherDetailsCardContents div span:first-of-type {
+    text-align: right;
+    padding-right: 5px;
+  }
+  
+  .dailyWeatherDetailsCardContents div span:last-of-type {
+    padding-left: 5px;
+  } */
+
+  .weathercardLargeIcon{
+    margin: -176px 0 38px 320px;
+  }
+
