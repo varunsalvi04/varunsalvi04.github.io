@@ -254,7 +254,7 @@ function loadWeatherCardDailyData(coordinates) {
         var image = document.createElement('img');
         image.src=`static/image/WeatherSymbolsforWeatherCodes/${element.values.weatherCode}.svg`;
         image.style.height="70px";
-        image.style.verticalAlign = "middle";  // Align icon vertically in the middle
+        image.style.verticalAlign = "middle"; 
         status.appendChild(image);
         var statusText = document.createTextNode(`${weatherCard[element.values.weatherCode]}`);
         status.appendChild(statusText);
@@ -278,19 +278,19 @@ function loadWeatherCardDailyData(coordinates) {
 } 
 
 
-// Function to format time in 12-hour format
+
 function formatTime(timeString) {
   const date = new Date(timeString);
   
-  // Format hours and minutes
+  
   let hours = date.getHours();
   const minutes = date.getMinutes();
   const ampm = hours >= 12 ? 'PM' : 'AM';
 
-  // Convert to 12-hour format
+  
   hours = hours % 12;
-  hours = hours ? hours : 12; // the hour '0' should be '12'
-  const minutesString = minutes < 10 ? '0' + minutes : minutes; // add leading zero if needed
+  hours = hours ? hours : 12; 
+  const minutesString = minutes < 10 ? '0' + minutes : minutes;
 
   return `${hours}:${minutesString} ${ampm}`;
 }
@@ -302,8 +302,6 @@ function loadDailyWeatherDetails(coordinates,startTime) {
 
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      // document.getElementById("demo").innerHTML = this.responseText;
-      // const xhr = new XMLHttpRequest();
       var weather_response = JSON.parse(xhttp.responseText);
       if("Too Many Calls" == weather_response.type){
         document.getElementById("noRecordFound").hidden = false;
@@ -311,7 +309,6 @@ function loadDailyWeatherDetails(coordinates,startTime) {
       }
       document.getElementById("noRecordFound").hidden = true;
       const weatherData = weather_response.data.timelines[0].intervals[0].values;
-      // Format the startTime using the custom formatDate function
       const formattedDate = formatDate(startTime);
       document.getElementById("dailyWeatherDetailDate").innerHTML = formattedDate;
       document.getElementById("dailyWeatherDetailStatus").innerHTML = `${weatherCard[weatherData.weatherCode]}`;
@@ -321,15 +318,17 @@ function loadDailyWeatherDetails(coordinates,startTime) {
       document.getElementById("dailyWeatherDetailText").innerHTML += `<div><span>Wind Speed</span>: <span>${weatherData.windSpeed}mph</span></div>`;
       document.getElementById("dailyWeatherDetailText").innerHTML += `<div><span>Humidity</span>: <span>${weatherData.humidity}%</span></div>`;
       document.getElementById("dailyWeatherDetailText").innerHTML += `<div><span>Visibility</span>: <span>${weatherData.visibility} mi</span></div>`;
-      // Format sunrise and sunset times
       document.getElementById("dailyWeatherDetailText").innerHTML += `<div><span>Sunrise/Sunset</span>: <span>${formatTime(weatherData.sunriseTime)}/${formatTime(weatherData.sunsetTime)}</span></div>`;
 
       document.getElementById("dailyWeatherDetailDateIcon").src = `static/image/WeatherSymbolsforWeatherCodes/${weatherData.weatherCode}.svg`;
-      // document.getElementById("dailyWeatherDetailDateIcon").style.marginLeft = "100px";  // Set float to right
-      // document.getElementById("dailyWeatherDetailDateIcon").style.marginTop = "-176px"; // Set margin-top to 10px
       
 
-      document.getElementById("dailyWeatherDetail").hidden = false;
+      
+      const dailyWeatherDetail = document.getElementById('dailyWeatherDetail');
+      dailyWeatherDetail.hidden = false;
+      dailyWeatherDetail.focus();
+      dailyWeatherDetail.scrollIntoView({ behavior: 'auto' });
+        
       document.getElementById("downArrow").hidden = false;
     }
   };
@@ -362,11 +361,9 @@ function displayTemperatureGraph(downArrowElement){
       //we should get up arrow instead of down arrow here
       downArrowElement.hidden = true;
       document.getElementById("upArrow").hidden = false;
-      console.log(temperatureRange);
 
       // Set margin-left and margin-right for the chart container
-      document.getElementById("temperatureGraph").style.marginLeft = "320px"; // Set desired margin-left
-      // document.getElementById("temperatureGraph").style.marginRight = "800px"; // Set desired margin-right
+      document.getElementById("temperatureGraph").style.marginLeft = "320px"; 
   
       Highcharts.chart('temperatureGraph', {
         chart: {
@@ -440,7 +437,6 @@ function onUpArrowClick(upArrowElement) {
   document.getElementById("downArrow").hidden = false;
   document.getElementById("temperatureGraph").hidden = true;
   document.getElementById("hourlyGraph").hidden = true;
-  console.log("Graph");
   const dailyWeatherDetail = document.getElementById('dailyWeatherDetail');
   if (dailyWeatherDetail) {
     dailyWeatherDetail.hidden = false;
@@ -681,7 +677,7 @@ var getChartOptions = function () {
         color: Highcharts.getOptions().colors[1],
         lineWidth: 1.5,
         data: winds,
-        vectorLength: 12,
+        vectorLength: 10,
         yOffset: -15,
         tooltip: {
           valueSuffix: " m/s",
@@ -725,7 +721,7 @@ function displayHourlyData(downArrowElement){
             direction: element.values.windDirection
           });
         }
-        // console.log(element);
+        
 
         
       });
@@ -778,11 +774,6 @@ function displayHourlyData(downArrowElement){
 
         
       })
-
-      console.log(temperature);
-      console.log(humidity);
-      console.log(pressure);
-      console.log(winds);
 
       document.getElementById("hourlyGraph").hidden = false;
       document.getElementById("hourlyGraph").style.marginTop = "20px";

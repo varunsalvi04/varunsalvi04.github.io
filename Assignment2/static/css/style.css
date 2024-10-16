@@ -12,9 +12,6 @@ body{
 }
 
 .banner{
-    /* justify-content: center;
-    align-items: center; */
-    /* margin-left: 500px; */
     text-align: center;
     font-family: sans-serif;
 }
@@ -90,11 +87,11 @@ body{
     background-color: #ECECEC;
 }
 
-/* Container for both city and state fields */
+
 .stateDropdownContainer {
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between input and dropdown */
+    gap: 10px;
 }
 
 .stateDropdownContainercorners2{
@@ -103,11 +100,10 @@ body{
   }
 
 
-/* Container for the city and state fields */
 .formRow {
     display: flex;
     align-items: center;
-    gap: 20px; /* Adjust the space between city and state fields */
+    gap: 20px;
 }
 
 .noRecordFound{
@@ -149,71 +145,54 @@ body{
     margin-left: 30px;
 }
 
-/* .submitButton{
-    margin-top: 25px;
-    margin-left: 30px;
-    width: 90px;
-    height: 44px;
-    background-color: rgb(78, 111, 173, 100);
-    color: white;
-} */
-
-/* .clearButton{
-    width: 90px;
-    height: 44px;
-    background-color: rgb(254, 182, 2, 100);
-    color: white;
-} */
-
-/* Submit Button with 3D Effect */
 .submitButton {
     margin-top: 20px;
     margin-left: 30px;
     width: 90px;
     height: 36px;
-    background-color: rgba(78, 111, 173, 1); /* Use the same color */
+    background-color: rgba(78, 111, 173, 1);
     color: white;
     border: none;
     text-align: center;
     cursor: pointer;
-    box-shadow: 0 4px rgba(50, 70, 120, 1); /* Darker shadow color for 3D effect */
+    box-shadow: 0 4px rgba(50, 70, 120, 1);
     transition: all 0.3s ease;
     font-size: 16px;
     outline: none;
 }
 
 .submitButton:active {
-    box-shadow: 0 2px rgba(50, 70, 120, 1); /* Adjust shadow on press */
+    box-shadow: 0 2px rgba(50, 70, 120, 1);
     transform: translateY(2px);
 }
 
 .submitButton:hover {
-    background-color: rgba(78, 111, 173, 0.9); /* Slight color change on hover */
+    background-color: rgba(78, 111, 173, 0.9);
 }
 
-/* Clear Button with 3D Effect */
+
 .clearButton {
     margin-left: -2px;
     width: 90px;
     height: 36px;
-    background-color: rgba(254, 182, 2, 1); /* Maintain the original color */
+    background-color: rgba(254, 182, 2, 1);
     color: white;
     border: none;
     text-align: center;
     cursor: pointer;
-    box-shadow: 0 4px rgba(200, 140, 0, 1); /* Darker shadow for 3D effect */
+    box-shadow: 0 4px rgba(200, 140, 0, 1);
     transition: all 0.3s ease;
     font-size: 16px;
     outline: none;
 }
 
 .clearButton:active {
-    box-shadow: 0 2px rgba(200, 140, 0, 1); /* Adjust shadow on press */
+    box-shadow: 0 2px rgba(200, 140, 0, 1);
     transform: translateY(2px);
 }
 
 .clearButton:hover {
-    background-color: rgba(254, 182, 2, 0.9); /* Slight color change on hover */
+    background-color: rgba(254, 182, 2, 0.9);
 }
 
 
@@ -225,13 +204,13 @@ body{
     width: 700px;
     height: 400px;
     white-space: nowrap;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2), -3px -3px 10px rgba(255, 255, 255, 0.2); /* 3D effect */
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2), -3px -3px 10px rgba(255, 255, 255, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .weathercard:hover {
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.3); /* Enhanced shadow on hover */
-    transform: translateY(-5px); /* Slight upward movement on hover */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
 }
 
 
@@ -240,37 +219,12 @@ body{
     width: 150px;
     height: 150px;
 }
-/* 
-.weathercardPressure{
-    margin-top: 180px;
-    margin-left: 70px;
-}
-
-.weathercardWindSpeed{
-    margin-top: 180px;
-    margin-left: 70px;
-}
-
-.weathercardVisibility{
-    margin-top: 180px;
-    margin-left: 70px;
-}
-
-.weathercardCloudCover{
-    margin-top: 180px;
-    margin-left: 70px;
-}
-
-.weathercardUVLevel{
-    margin-top: 180px;
-    margin-left: 70px;
-} */
 
 .weathercardDetails {
-    width: 100%; /* Makes the table full width */
-    table-layout: fixed; /* Ensures equal column width */
-    border-spacing: 0px; /* Adjust spacing between cells */
-    text-align: center; /* Centers text and images in table cells */
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 0px;
+    text-align: center;
     margin-top: -20px;
     margin-left: 5px;
     color: grey;
@@ -280,8 +234,8 @@ body{
 
 .weathercardDetails th,
 .weathercardDetails td {
-    padding: 8px; /* Adds padding inside cells */
-    border-bottom: 0px solid #ddd; /* Optional: Adds a border for neatness */
+    padding: 8px;
+    border-bottom: 0px solid #ddd;
 }
 
 .weathercardDetails th {
@@ -290,7 +244,7 @@ body{
 
 .weathercardDetails img {
     display: block;
-    margin: 0 auto; /* Centers the images inside table cells */
+    margin: 0 auto;
 }
 
 
@@ -354,7 +308,7 @@ body{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     justify-content: center;
     align-items: center;
-    margin-left: 250px;
+    margin-left: 225px;
     margin-top: 45px;
 }
 .tableHeader {
@@ -366,10 +320,10 @@ body{
 .styled-table th, 
 .styled-table td{
     height: 50px;
-    border-bottom: 10px solid #E5E5E5; /* Optional: Adds a border for neatness */
-    text-align: center; /* Center content horizontally */
-    vertical-align: middle; /* Center content vertically */
-    border-right: none; /* Remove right border */
+    border-bottom: 10px solid #E5E5E5;
+    text-align: center;
+    vertical-align: middle;
+    border-right: none; 
 }
 
 .tableRow{
@@ -379,10 +333,10 @@ body{
     height: 50px;
 }
 
-/* Remove the right border for the last cell in each row to prevent extra border */
+
 .styled-table tr td:last-child,
 .styled-table tr th:last-child {
-    border-right: none; /* Ensure no right border for the last column */
+    border-right: none;
 }
 
 .dailyWeatherDetailsCard {
@@ -390,16 +344,16 @@ body{
     margin-top: 20px;
     margin-left: 477px;
     font-family: sans-serif;
-    width: 490px;
+    width: 500px;
     height: 425px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2), -3px -3px 10px rgba(255, 255, 255, 0.2); /* 3D effect */
-    border-bottom: 2px solid #000; /* Slight border at the bottom */
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2), -3px -3px 10px rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid #000;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .dailyWeatherDetailsCard:hover {
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.3); /* Enhanced shadow on hover */
-    transform: translateY(-5px); /* Slight upward movement on hover */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
 }
 
 
@@ -487,24 +441,7 @@ body{
     font-weight: 550;
 }
 
-/* .dailyWeatherDetailsCardContents div {
-    display: flex;
-  }
-  
-  .dailyWeatherDetailsCardContents div span {
-    flex: 1;
-  }
-  
-  .dailyWeatherDetailsCardContents div span:first-of-type {
-    text-align: right;
-    padding-right: 5px;
-  }
-  
-  .dailyWeatherDetailsCardContents div span:last-of-type {
-    padding-left: 5px;
-  } */
-
-  .weathercardLargeIcon{
+.weathercardLargeIcon{
     margin: -176px 0 38px 320px;
-  }
+}
 

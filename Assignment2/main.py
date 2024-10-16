@@ -45,10 +45,10 @@ def fetch_weather_details():
         "content-type": "application/json"
     }
 
-    response = requests.post(f"https://api.tomorrow.io/v4/timelines?apikey=hKYen1VV41mZiz2XIQJPjGhm8PACE1M1",json=payload,headers=headers).json()
+    response = requests.post(f"https://api.tomorrow.io/v4/timelines?apikey=lNBRMU7oRzjQAqhOU4qn1YNOOZWXnXit",json=payload,headers=headers).json()
     return response
 
-#fetching the coordiates when the strrt, city, and state are entered 
+#fetching the coordiates when the street, city, and state are entered 
 #if some bogus street and city are given just use the state to get the coordinates
 @app.route('/coordinates')
 def fetch_coordinates(): 
