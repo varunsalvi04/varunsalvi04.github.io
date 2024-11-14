@@ -1,0 +1,15 @@
+{
+    "/api": {
+      "target": "https://maps.googleapis.com", 
+      "secure": true,
+      "pathRewrite": {
+        "^/api": "/maps/api/place/autocomplete/json" 
+      },
+      "changeOrigin": true
+    },
+    "*/backend/*":{
+      "target": "http://localhost:8080", 
+      "secure": false,
+      "changeOrigin": true
+    }
+}

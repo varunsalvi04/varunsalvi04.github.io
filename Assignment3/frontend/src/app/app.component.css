@@ -1,0 +1,22 @@
+#map {
+  height: 400px;
+  /* or any other size you want */
+  width: 100%;
+}
+
+.btn-light:hover {
+  background-color: #6B747E !important;
+  color: white !important;
+}
+
+/* Style for checked checkbox */
+.form-check-input:checked {
+  background-color: #D9A700;
+  border-color: #D9A700;
+}
+
+/* Style for the white tick inside the checkbox */
+
+input.ng-invalid.ng-touched {
+  border: 2px solid red;
+}

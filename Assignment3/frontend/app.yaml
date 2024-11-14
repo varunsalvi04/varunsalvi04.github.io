@@ -1,0 +1,15 @@
+runtime: nodejs18
+service: default
+
+instance_class: F2
+
+env_variables: 
+  BUCKET_NAME: "assignment3-439821.appspot.com"
+
+handlers:
+- url: /
+  static_files: dist/assignment3/index.html
+  upload: dist/assignment3/index.html
+
+- url: /
+  static_dir: dist/assignment3 
