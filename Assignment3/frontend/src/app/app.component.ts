@@ -17,7 +17,7 @@ import { Observable } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map, startWith, switchMap } from 'rxjs/operators';
 import { GeocodeService } from './geocode.service';
 import { IpinfoService } from './ipinfo.service';
-import { PostService } from './post.service';
+import { GooglePlacesService } from './places.service';
 import { WeeklyWeatherTableService } from './weekly-weather-table.service';
 import { FavoriteCityCollectionService } from './favorite-city-collection.service';
 import { Address } from './address.model';
@@ -126,7 +126,7 @@ export class AppComponent {
   isSearchButtonDisabled = true;
 
   //Services for the various APIs used
-  constructor(private service: PostService,
+  constructor(private googlePlacesService: GooglePlacesService,
     private ipInfoService: IpinfoService,
     private geocodeService: GeocodeService,
     private weeklyWeatherService: WeeklyWeatherTableService,
@@ -137,7 +137,11 @@ export class AppComponent {
       debounceTime(400),
       distinctUntilChanged(),
       switchMap(val => {
-        return this.filter(val || '')
+        if (typeof val === 'string' && val.length > 0) {
+          return this.googlePlacesService.getPlacePredictions(val);
+        } else {
+          return [];
+        }
       })
     )
   }
@@ -148,6 +152,7 @@ export class AppComponent {
     if (this.isCheckboxChecked) {
       this.isDisabled = true;
       this.myControl.disable();
+      this.myControl.reset();
       this.inputStreet = '';
       this.state = 'Select a State';
       this.ipInfoService.getCoordinates().subscribe(
@@ -180,7 +185,7 @@ export class AppComponent {
       this.loading = true;
       setTimeout(() => {
         this.loading = false;
-      }, 3000);
+      }, 500);
       const locationObject = (<Address>this.myControl.value);
       let state = this.states.find(state => state.code === locationObject.state);
       this.showCityWeatherData(locationObject);
@@ -449,16 +454,17 @@ export class AppComponent {
 
 
 
-  
-  filter(val: string): Observable<any[]> {
-    // call the service which makes the http-request
-    return this.service.getData(val)
-      .pipe(
-        map(response => response.filter(option => {
-          return option.city.toLowerCase().indexOf(val.toLowerCase()) === 0
-        }))
-      )
-  }
+
+  // filter(val: string): [] {
+  //   // call the service which makes the http-request
+  //   let results = []
+  //   return this.service.getData(val).then(predictions => {
+  //     this. re
+  //   }
+      
+  //   );
+
+  // }
 
   public open(modal: any): void {
     this.modalService.open(modal);
